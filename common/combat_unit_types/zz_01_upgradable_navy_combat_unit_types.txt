@@ -226,3 +226,16 @@ INJECT:combat_unit_type_battleship = {
 		combat_unit_type_dreadnought
 	}
 }
+
+### Support Ship group
+INJECT:combat_unit_type_submarine = {
+	upgrades = {
+		combat_unit_type_carrier
+	}
+}
+
+INJECT:combat_unit_type_carrier = {
+	upgrades = {
+		combat_unit_type_submarine
+	}
+}
