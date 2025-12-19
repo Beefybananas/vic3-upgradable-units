@@ -280,3 +280,191 @@ INJECT:combat_unit_type_mechanized_infantry = {
 		combat_unit_type_squad_infantry
 	}
 }
+
+### Artillery
+REPLACE:combat_unit_type_cannon_artillery = {
+	group = combat_unit_group_artillery
+	max_manpower = 1000
+	upkeep_modifier = {
+		goods_input_artillery_add = 1
+	}
+	battle_modifier = {
+		unit_offense_add = 25
+		unit_defense_add = 15
+		unit_morale_loss_add = 10
+		unit_kill_rate_add = 0.1
+		unit_devastation_mult = 0.1
+	}
+	formation_modifier = {
+		military_formation_mobilization_speed_mult = -0.2
+		military_formation_movement_speed_mult = -0.2
+	}
+	unlocking_technologies = {
+		artillery
+	}
+	combat_unit_image = {
+		trigger = {
+			has_culture_graphics = east_asian
+		}
+		texture = "gfx/unit_illustrations/artillery_east_asian_cannon.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			has_culture_graphics = south_asian
+		}
+		texture = "gfx/unit_illustrations/artillery_south_asian_cannon.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			has_culture_graphics = african
+		}
+		texture = "gfx/unit_illustrations/artillery_african_cannon.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			has_culture_graphics = arabic
+		}
+		texture = "gfx/unit_illustrations/artillery_arabic_cannon.dds"
+	}
+	combat_unit_image = {
+		# fallback
+		texture = "gfx/unit_illustrations/artillery_eu_cannon.dds"
+	}
+	upgrades = {
+		combat_unit_type_mobile_artillery
+		combat_unit_type_shrapnel_artillery
+		combat_unit_type_siege_artillery
+		combat_unit_type_heavy_tank
+	}
+}
+
+REPLACE:combat_unit_type_mobile_artillery = {
+	group = combat_unit_group_artillery
+	max_manpower = 1000
+	upkeep_modifier = {
+		goods_input_artillery_add = 2
+	}
+	battle_modifier = {
+		unit_offense_add = 30
+		unit_defense_add = 15
+		unit_morale_loss_add = 8
+		unit_kill_rate_add = 0.2
+		unit_devastation_mult = 0.15
+	}
+	formation_modifier = {
+		military_formation_mobilization_speed_mult = -0.2
+		military_formation_movement_speed_mult = -0.2
+	}
+	unlocking_technologies = {
+		napoleonic_warfare
+	}
+	combat_unit_image = {
+		trigger = {
+			has_culture_graphics = east_asian
+		}
+		texture = "gfx/unit_illustrations/artillery_east_asian_mobile.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			has_culture_graphics = south_asian
+		}
+		texture = "gfx/unit_illustrations/artillery_south_asian_mobile.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			has_culture_graphics = african
+		}
+		texture = "gfx/unit_illustrations/artillery_african_mobile.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			has_culture_graphics = arabic
+		}
+		texture = "gfx/unit_illustrations/artillery_arabic_mobile.dds"
+	}
+	combat_unit_image = {
+		# fallback
+		texture = "gfx/unit_illustrations/artillery_eu_mobile.dds"
+	}
+	upgrades = {
+		combat_unit_type_cannon_artillery
+		combat_unit_type_shrapnel_artillery
+		combat_unit_type_siege_artillery
+		combat_unit_type_heavy_tank
+	}
+}
+
+REPLACE:combat_unit_type_shrapnel_artillery = {
+	group = combat_unit_group_artillery
+	max_manpower = 1000
+	upkeep_modifier = {
+		goods_input_artillery_add = 3
+		goods_input_ammunition_add = 3
+	}
+	battle_modifier = {
+		unit_offense_add = 45
+		unit_defense_add = 25
+		unit_morale_loss_add = 6
+		unit_kill_rate_add = 0.3
+		unit_devastation_mult = 0.15
+	}
+	formation_modifier = {
+		military_formation_mobilization_speed_mult = -0.2
+		military_formation_movement_speed_mult = -0.2
+	}
+	unlocking_technologies = {
+		breech_loading_artillery
+	}
+	combat_unit_image = {
+		trigger = {
+			has_culture_graphics = east_asian
+		}
+		texture = "gfx/unit_illustrations/artillery_east_asian_shrapnel.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			has_culture_graphics = south_asian
+		}
+		texture = "gfx/unit_illustrations/artillery_south_asian_shrapnel.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			has_culture_graphics = african
+		}
+		texture = "gfx/unit_illustrations/artillery_african_shrapnel.dds"
+	}
+	combat_unit_image = {
+		trigger = {
+			has_culture_graphics = arabic
+		}
+		texture = "gfx/unit_illustrations/artillery_arabic_shrapnel.dds"
+	}
+	combat_unit_image = {
+		# fallback
+		texture = "gfx/unit_illustrations/artillery_eu_shrapnel.dds"
+	}
+	upgrades = {
+		combat_unit_type_cannon_artillery
+		combat_unit_type_mobile_artillery
+		combat_unit_type_siege_artillery
+		combat_unit_type_heavy_tank
+	}
+}
+
+INJECT:combat_unit_type_siege_artillery = {
+	upgrades = {
+		combat_unit_type_cannon_artillery
+		combat_unit_type_mobile_artillery
+		combat_unit_type_shrapnel_artillery
+		combat_unit_type_heavy_tank
+	}
+}
+
+INJECT:combat_unit_type_heavy_tank = {
+	upgrades = {
+		combat_unit_type_cannon_artillery
+		combat_unit_type_mobile_artillery
+		combat_unit_type_shrapnel_artillery
+		combat_unit_type_siege_artillery
+	}
+}
