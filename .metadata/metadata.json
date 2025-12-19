@@ -1,0 +1,18 @@
+{
+    "name": "Upgradable Units",
+    "id": "com.github.beefybananas.vic3-upgradable-units",
+    "version": "",
+    "game_id": "victoria3",
+    "supported_game_version": "1.12.*",
+    "short_description": "Upgrade any of your military units to any others of that class.",
+    "tags": [
+        "Balance",
+        "Fixes",
+        "Gameplay",
+        "Warfare"
+    ],
+    "relationships": [],
+    "game_custom_data": {
+        "multiplayer_synchronized": true
+    }
+}
